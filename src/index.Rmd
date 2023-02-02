@@ -1,9 +1,9 @@
 ---
-title: "Introduction to QGIS"
-author: "Gispo Ltd."
+title: "Visualisoinnin mestariksi QGISillä"
+author: "Gispo Oy"
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
-abstract: "A course covering advanced GeoServer topics."
+abstract: "Jatkokurssi QGISin visualisointitekniikoista."
 output:
     bookdown::html_book:
         toc: true
@@ -16,11 +16,11 @@ documentclass: book
 
 <!-- Harjoitukset -->
 
-# Template
+# Visualisoinnin mestariksi QGISillä
 
 ## Tervetuloa kurssille!
 
-Kurssilla tehdään ja opitaan niitä ja näitä.
+Tällä kurssilla perehdytään erilaisiin aineistojen visualisointitekniikoihin QGIS-paikkatieto-ohjelmistolla. Ohjeet on laadittu QGISin pitkäaikaisversiolle 3.16. QGISin peruskäytön olisi hyvä olla tuttua ennen kurssille osallistumista. Kurssin aikataulussa on jätetty tilaa keskustelulle: kysy siis rohkeasti opettajalta lisätietoja, jos käytetty terminologia tai joku asia jää epäselväksi!
 
 ## Lukuohje
 
@@ -84,4 +84,4 @@ Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä koulu
 
 ## Lisenssi ja oikeudet
 
-Nämä materiaalit on "_____"-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
+Nämä materiaalit on "Visualisoinnin mestariksi QGISillä"- kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
