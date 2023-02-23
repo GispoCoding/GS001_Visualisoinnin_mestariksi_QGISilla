@@ -54,7 +54,7 @@ Voit vaihtaa eri sektoreiden värejä klikkaamalla värisymbolia sekä sektoreid
 
 **Tulosteenmuodostaja ja kaavion selite**
 
-Ympyräkaavion selite (kaavioiden suhteellinen koko) tulee vielä muodostaa erikseen, jotta se tulee näkyviin tulosteelle. Valitse **Selite** -välilehti ja aseta merkinnät mieleiseksesi esim. oheisen kuvan mukaisesti. Voit asettaa muutaman kokoluokan manuaalisesti tai käyttää valmiita luokkia. 
+Ympyräkaavion selite (kaavioiden suhteellinen koko) tulee vielä muodostaa erikseen, jotta se tulee näkyviin tulosteelle. Valitse **Selite** -välilehti ja aseta merkinnät mieleiseksesi esim. oheisen kuvan mukaisesti. Voit asettaa muutaman kokoluokan manuaalisesti tai käyttää valmiita luokkia.
 
 ![](img/harjoitus_2/image7.png)
 

@@ -60,7 +60,7 @@ Karttanäkymän katselukulmaa muuttamalla huomataan, että näkymä on vielä no
 
 -   Hiiren rulla zoomaa näkymää lähemmäs ja kauemmas
 
--   Liikuttamalla hiirtä Shift-näppäin pohjassa voit pyörittää mallia 
+-   Liikuttamalla hiirtä Shift-näppäin pohjassa voit pyörittää mallia
 
 -   Liikuttamalla hiirtä Ctrl-näppäin pohjassa voit siirtää mallia ("pan")
 
@@ -84,7 +84,7 @@ Huom! QGIS-projektin koordinaattijärjestelmän yksikön pitää olla metreinä 
 
 ## **Rakennusten ja muiden objektien 3D-visualisointi**
 
-Luodun kolmiulotteisen näkymän päälle voidaan tuoda ja luoda uusia tasoja, jotka asettuvat maaston mukaisesti 3D-pinnalle. Seuraavaksi luodaan  3D-visualisointi tasosta  **mtk_rakennukset_kuopio.gpkg**, joka sisältää maastotietokannasta haetut rakennukset  Kuopion alueelta. 
+Luodun kolmiulotteisen näkymän päälle voidaan tuoda ja luoda uusia tasoja, jotka asettuvat maaston mukaisesti 3D-pinnalle. Seuraavaksi luodaan  3D-visualisointi tasosta  **mtk_rakennukset_kuopio.gpkg**, joka sisältää maastotietokannasta haetut rakennukset Kuopion alueelta.
 
 Nyt **Rakennukset-taso** sisältää polygonikohteita. Näistä voidaan luoda kolmiulotteisia seuraavasti: avaa tason ominaisuudet. Valitse 3D-näkymä aukeavasta ikkunasta ja sieltä **Yksittäinen symboli -asetukset**. Kohteiden korkeus määrittyy **Extrusion-asetuksen** perusteella. Asettamalla tähän arvolaatikkoon esimerkiksi 5,00 (metriä), jokainen rakennus saa tämän saman korkeuden. Jos taso sisältää tiedon korkeudesta, voidaan se määrittää klikkaamalla kuvaketta arvolaatikon oikealla puolella (Asetusten kumoaminen / Data defined override) ja lisäämällä lausekkeeseen (**Expression String Builder**, joka aukeaa kohdasta **Muokkaa...**) ja valitsemalla korkeustiedon kenttä. Tähän voidaan siis myös lisätä mikä tahansa lauseke, jonka perusteella kohteiden korkeus visualisoidaan.
 
@@ -106,7 +106,7 @@ Tehdään nyt karttatuloste, joka sisältää sekä 2D-näkymän että 3D-näkym
 
 Tuloste tehdään periaatteessa samoin kuten normaalikin karttatuloste, eli luodaan uusi taitto (**Projekti \> Uusi taitto\...**), annetaan sille nimi **"kuopio_3d"**. 2D-kartta lisätään kuten aiemminkin vasemman reunan paneelista kohdasta Lisää uusi Kartta taittoon, ja määrittämällä sille sopiva laatikko sivulle valkoiselle pohjalle, jolloin karttaikkunan näkymä piirtyy laatikkoon. Määritä laatikon leveys vajaan puolen sivun levyiseksi, jotta saat lisättyä kolmiulotteisen karttanäkymän sen viereen. Lisää tarvittavat selitteet (kartan otsikko, mittakaava, pohjoisnuoli\...)
 
-Tämä 3D-karttanäkymä saadaan lisättyä vastaavalla tavalla äskeisen napin alapuolelta, kohdasta  Lisää uusi 3D kartta taittoon, ja määrittelemällä tälle oma laatikko edellisen laatikon viereen. Nyt 3D-näkymä ei piirry automaattisesti, vaan laatikossa lukee "Scene not set". Näkymä on konfiguroitava oikeanpuoleisesta paneelista (Elementit / Elementin ominaisuudet). Valitaan 3D-kartan ominaisuudet (3D-kartta 1) ja asetetaan ne suoraan kohdasta **Scene Settings** painamalla **Copy Settings from a 3D View...** ja valitaan **3D-kartta 1**. Nyt taittoon latautuu myös 3D-näkymä. Näkymän katselukulmaa, -etäisyyttä jne. pystyy tämän jälkeen muuttamaan Camera Pose -asetuksista (ja alla olevasta **Set from a 3D View... -painikkeesta** palauttamaan alkuarvot).
+Tämä 3D-karttanäkymä saadaan lisättyä vastaavalla tavalla äskeisen napin alapuolelta, kohdasta Lisää uusi 3D kartta taittoon, ja määrittelemällä tälle oma laatikko edellisen laatikon viereen. Nyt 3D-näkymä ei piirry automaattisesti, vaan laatikossa lukee "Scene not set". Näkymä on konfiguroitava oikeanpuoleisesta paneelista (Elementit / Elementin ominaisuudet). Valitaan 3D-kartan ominaisuudet (3D-kartta 1) ja asetetaan ne suoraan kohdasta **Scene Settings** painamalla **Copy Settings from a 3D View...** ja valitaan **3D-kartta 1**. Nyt taittoon latautuu myös 3D-näkymä. Näkymän katselukulmaa, -etäisyyttä jne. pystyy tämän jälkeen muuttamaan Camera Pose -asetuksista (ja alla olevasta **Set from a 3D View... -painikkeesta** palauttamaan alkuarvot).
 
 Alla olevan kaltainen karttatuloste saadaan seuraavalla tavalla:  lisää QGISin pääikkunassa päällimmäiseksi uusi taso joka sisältää taustakartan, vaikkapa Selain-paneelista löytyvän XYZ Tiles-valikon Open Street Map. Kun painat karttatulosteikkunassa päivityspainiketta **Update Map preview** ![](img/harjoitus_3/image11.png), tulosteen 2D-osaan tulee näkyviin Open Street Map -taustakartta 3D-osan pysyessä ennallaan.
 
