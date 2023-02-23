@@ -22,11 +22,11 @@ Avaa uusi QGIS-projekti (**Projekti → Uusi**) ja tallenna se nimellä **\"QGIS
 
 ## **Temporal controller**
 
-**Temporal controller -työkalulla** voidaan luoda animaatioita mistä tahansa datasta, jossa on aikaleima. Liikkuvat kohteet tallennetaan useimmiten sijaintina tiettynä ajanhetkenä, ja Temporal controller sopiikin parhaiten datalle joka on spatiaalisesti pistemäistä ja temporaalisesti hetkellistä, eli sillä ei ole kestoa. 
+**Temporal controller -työkalulla** voidaan luoda animaatioita mistä tahansa datasta, jossa on aikaleima. Liikkuvat kohteet tallennetaan useimmiten sijaintina tiettynä ajanhetkenä, ja Temporal controller sopiikin parhaiten datalle joka on spatiaalisesti pistemäistä ja temporaalisesti hetkellistä, eli sillä ei ole kestoa.
 
 ![](img/harjoitus_4/image1.png)
 
-Aikaleimakentän on oltava tallennettu sellaisessa muodossa, että QGIS osaa lukea sitä. Hyväksytyt aikaleiman muodot ovat: 
+Aikaleimakentän on oltava tallennettu sellaisessa muodossa, että QGIS osaa lukea sitä. Hyväksytyt aikaleiman muodot ovat:
 
 ::: file-content-box
 YYYY-MM-DD HH:MM:SS.ssssss\
@@ -50,6 +50,7 @@ DD/MM/YYYY HH:MM:SS\
 DD/MM/YYYY HH:MM\
 DD/MM/YYYY\
 :::
+
 
 Mikäli aineistosi aikaleima ei ole missään näistä muodoista, voit muokata sitä esim. Excelillä tai muulla taulukko-ohjelmalla. Huomaa, että koko aikaleiman on oltava samassa kentässä! Jos siis aineistosi sisältää sekä päivämäärän että kellonajan, ne täytyy ilmoittaa yhdessä ja samassa kentässä.
 
