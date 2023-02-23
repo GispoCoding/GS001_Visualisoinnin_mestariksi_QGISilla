@@ -155,7 +155,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <p><strong>Tyyppi</strong>-alasvetovalikosta on kolme vaihtoehtoa korkeusmallille: DEM (Raster layer), Flat terrain (kaksiulotteinen näkymä) ja Online (korkeustiedot haetaan internetistä). Valitse siis tyypiksi DEM (Raster layer), jolloin seuraavalle riville ilmestyy Korkeus-alasvetovalikko, josta valitaan se rasteritaso, joka toimii korkeusmallina. Eli tässä tapauksessa valitaan <strong>P5114D_kuopio_dem.tif</strong>. Paina tämän jälkeen <strong>OK</strong> ja tarkastele 3D-näkymää eri suunnista ja korkeuksilta. Näkymässä liikutaan hiiren avulla:</p>
 <ul>
 <li><p>Hiiren rulla zoomaa näkymää lähemmäs ja kauemmas</p></li>
-<li><p>Liikuttamalla hiirtä Shift-näppäin pohjassa voit pyörittää mallia </p></li>
+<li><p>Liikuttamalla hiirtä Shift-näppäin pohjassa voit pyörittää mallia</p></li>
 <li><p>Liikuttamalla hiirtä Ctrl-näppäin pohjassa voit siirtää mallia (“pan”)</p></li>
 </ul>
 <p>Myös muut olennaisimmat 3D-näkymän asetuksista löytyvät sen <strong>Maasto-osiosta</strong>. Avaa siis konfigurointiasetukset uudelleen. Maastonmuotojen ollessa loivia voi olla hyödyllistä hieman liioitella korkeuseroja pystymittakaavaa muuttamalla. Kokeile tätä eri asetuksilla, ja valitse sopiva (käyttötarkoituksesta riippuen n. 2,00 voi olla tässä hyvä). Tiilien resoluutiota <strong>(Tile resolution</strong>) voi myös tarvittaessa lisätä oletusarvosta (16 px).</p>
@@ -173,7 +173,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 </div>
 <div id="rakennusten-ja-muiden-objektien-3d-visualisointi" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> <strong>Rakennusten ja muiden objektien 3D-visualisointi</strong></h2>
-<p>Luodun kolmiulotteisen näkymän päälle voidaan tuoda ja luoda uusia tasoja, jotka asettuvat maaston mukaisesti 3D-pinnalle. Seuraavaksi luodaan  3D-visualisointi tasosta  <strong>mtk_rakennukset_kuopio.gpkg</strong>, joka sisältää maastotietokannasta haetut rakennukset  Kuopion alueelta. </p>
+<p>Luodun kolmiulotteisen näkymän päälle voidaan tuoda ja luoda uusia tasoja, jotka asettuvat maaston mukaisesti 3D-pinnalle. Seuraavaksi luodaan  3D-visualisointi tasosta  <strong>mtk_rakennukset_kuopio.gpkg</strong>, joka sisältää maastotietokannasta haetut rakennukset Kuopion alueelta.</p>
 <p>Nyt <strong>Rakennukset-taso</strong> sisältää polygonikohteita. Näistä voidaan luoda kolmiulotteisia seuraavasti: avaa tason ominaisuudet. Valitse 3D-näkymä aukeavasta ikkunasta ja sieltä <strong>Yksittäinen symboli -asetukset</strong>. Kohteiden korkeus määrittyy <strong>Extrusion-asetuksen</strong> perusteella. Asettamalla tähän arvolaatikkoon esimerkiksi 5,00 (metriä), jokainen rakennus saa tämän saman korkeuden. Jos taso sisältää tiedon korkeudesta, voidaan se määrittää klikkaamalla kuvaketta arvolaatikon oikealla puolella (Asetusten kumoaminen / Data defined override) ja lisäämällä lausekkeeseen (<strong>Expression String Builder</strong>, joka aukeaa kohdasta <strong>Muokkaa…</strong>) ja valitsemalla korkeustiedon kenttä. Tähän voidaan siis myös lisätä mikä tahansa lauseke, jonka perusteella kohteiden korkeus visualisoidaan.</p>
 <p><img src="img/harjoitus_3/image9.png" /></p>
 <p>Rakennukset-tasosta korkeustietoa ei saada suoraan, mutta sitä voidaan arvioida attribuuttikentän “kerrosluku” perusteella. Lausekkeeksi voidaan kirjoittaa esimerkiksi <strong>“kerrosluku * 5”</strong>, jolloin jokaisen kerroksen korkeudeksi tulee 5 metriä. Valitaan nyt visualisoinnin kannalta <strong>Altitude clamping &gt; Absoluuttinen</strong> sekä <strong>Altitude binding &gt; Keskiö</strong>.</p>
@@ -187,7 +187,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <h2><span class="header-section-number">4.7</span> <strong>Karttatuloste</strong></h2>
 <p>Tehdään nyt karttatuloste, joka sisältää sekä 2D-näkymän että 3D-näkymän. Tehdään siitä seuraavanlainen: tulosteen 2D-osa sisältää taustakartan ja 3D-osa 3D-maiseman vastaavasta alueesta. Edellä käytetyn <strong>mtk_rakennukset_kuopio.gpkg-tason</strong> voi siis nyt ruksata pois näkyvistä.</p>
 <p>Tuloste tehdään periaatteessa samoin kuten normaalikin karttatuloste, eli luodaan uusi taitto (<strong>Projekti &gt; Uusi taitto...</strong>), annetaan sille nimi <strong>“kuopio_3d”</strong>. 2D-kartta lisätään kuten aiemminkin vasemman reunan paneelista kohdasta Lisää uusi Kartta taittoon, ja määrittämällä sille sopiva laatikko sivulle valkoiselle pohjalle, jolloin karttaikkunan näkymä piirtyy laatikkoon. Määritä laatikon leveys vajaan puolen sivun levyiseksi, jotta saat lisättyä kolmiulotteisen karttanäkymän sen viereen. Lisää tarvittavat selitteet (kartan otsikko, mittakaava, pohjoisnuoli...)</p>
-<p>Tämä 3D-karttanäkymä saadaan lisättyä vastaavalla tavalla äskeisen napin alapuolelta, kohdasta  Lisää uusi 3D kartta taittoon, ja määrittelemällä tälle oma laatikko edellisen laatikon viereen. Nyt 3D-näkymä ei piirry automaattisesti, vaan laatikossa lukee “Scene not set”. Näkymä on konfiguroitava oikeanpuoleisesta paneelista (Elementit / Elementin ominaisuudet). Valitaan 3D-kartan ominaisuudet (3D-kartta 1) ja asetetaan ne suoraan kohdasta <strong>Scene Settings</strong> painamalla <strong>Copy Settings from a 3D View…</strong> ja valitaan <strong>3D-kartta 1</strong>. Nyt taittoon latautuu myös 3D-näkymä. Näkymän katselukulmaa, -etäisyyttä jne. pystyy tämän jälkeen muuttamaan Camera Pose -asetuksista (ja alla olevasta <strong>Set from a 3D View… -painikkeesta</strong> palauttamaan alkuarvot).</p>
+<p>Tämä 3D-karttanäkymä saadaan lisättyä vastaavalla tavalla äskeisen napin alapuolelta, kohdasta Lisää uusi 3D kartta taittoon, ja määrittelemällä tälle oma laatikko edellisen laatikon viereen. Nyt 3D-näkymä ei piirry automaattisesti, vaan laatikossa lukee “Scene not set”. Näkymä on konfiguroitava oikeanpuoleisesta paneelista (Elementit / Elementin ominaisuudet). Valitaan 3D-kartan ominaisuudet (3D-kartta 1) ja asetetaan ne suoraan kohdasta <strong>Scene Settings</strong> painamalla <strong>Copy Settings from a 3D View…</strong> ja valitaan <strong>3D-kartta 1</strong>. Nyt taittoon latautuu myös 3D-näkymä. Näkymän katselukulmaa, -etäisyyttä jne. pystyy tämän jälkeen muuttamaan Camera Pose -asetuksista (ja alla olevasta <strong>Set from a 3D View… -painikkeesta</strong> palauttamaan alkuarvot).</p>
 <p>Alla olevan kaltainen karttatuloste saadaan seuraavalla tavalla:  lisää QGISin pääikkunassa päällimmäiseksi uusi taso joka sisältää taustakartan, vaikkapa Selain-paneelista löytyvän XYZ Tiles-valikon Open Street Map. Kun painat karttatulosteikkunassa päivityspainiketta <strong>Update Map preview</strong> <img src="img/harjoitus_3/image11.png" />, tulosteen 2D-osaan tulee näkyviin Open Street Map -taustakartta 3D-osan pysyessä ennallaan.</p>
 <p><img src="img/harjoitus_3/image12.png" /></p>
 <p>Kun olet valmis, tallenna projektitiedosto kurssihakemistoon pikanäppäimellä <strong>CTRL + T</strong> tai päävalikosta <strong>Projekti &gt; Tallenna</strong>.</p>
@@ -216,7 +216,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 
 <div class="footer-info">
 <h5 class="footer-title footer-company">Gispo Ltd.
-<span class="footer-copyright-year">© 2023</span></h5>
+<span id="yr" class="footer-copyright-year" >© 2023</span></h5>
 <span class="footer-contact-info">Kumpulantie 3, 3. krs
 <br>00520 Helsinki, Finland
 <br>info@gispo.fi
@@ -230,6 +230,9 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 
 
 <script src="js/nav-script.js"></script>
-
+<script>
+var year = currentTime.getFullYear();
+document.getElementById("yr").textContent=`© `;
+</script>
 </body>
 </html>
